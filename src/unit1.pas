@@ -5,7 +5,7 @@ unit Unit1;
 interface
 
 uses
-  SysUtils, DB, Forms, Controls, Dialogs, StdCtrls,
+  SysUtils, DB, Forms, Controls, Dialogs, StdCtrls, Unit2,
   VirtualDBGrid, ZConnection, ZDataset;
 
 type
@@ -22,9 +22,8 @@ type
     ZQuery1: TZQuery;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Run;
   private
-    procedure Log(message: string);
-    procedure ClearLogs();
   public
 
   end;
@@ -40,26 +39,7 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  if Memo1.Lines.Text = string.Empty then
-  begin
-    ShowMessage('Empty SQL!');
-    Exit;
-  end;
-
-  try
-    Log('Connecting..');
-    ZConnection1.Connected := True;
-    Log('Connected..');
-    Log('Table opening..');
-    ZQuery1.SQL := Memo1.Lines;
-    ZQuery1.Open;
-    Log('Table opened..');
-  except
-    on Exc: Exception do
-    begin
-      ShowMessage(Exc.Message);
-    end;
-  end;
+  Run;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
@@ -69,14 +49,33 @@ begin
   ListBox1.Items.Clear;
 end;
 
-procedure TForm1.Log(message: string);
+procedure TForm1.Run;
 begin
-  ListBox1.Items.Add(message);
-end;
+  if Memo1.Lines.Text = string.Empty then
+  begin
+    ShowMessage('Empty SQL!');
+    Log('Empty SQL!');
+    Exit;
+  end;
+  try
+    try
+      ZConnection1.Connected := True;
+      Log(Memo1.Lines.Text);
+      ZQuery1.SQL := Memo1.Lines;
+      if not ZQuery1.Prepared then
+        ZQuery1.Prepare;
+      ZQuery1.Open;
+    except
+      on Exc: Exception do
+      begin
+        ShowMessage(Exc.Message);
+        Log(Exc.Message);
+      end;
 
-procedure TForm1.ClearLogs;
-begin
-  ListBox1.Items.Clear;
+    end;
+  finally
+    ZQuery1.Prepared := False;
+  end;
 end;
 
 end.
