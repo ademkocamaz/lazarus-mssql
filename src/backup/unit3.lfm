@@ -6,6 +6,7 @@ object Form2: TForm2
   Caption = 'Form2'
   ClientHeight = 240
   ClientWidth = 320
+  OnCreate = FormCreate
   LCLVersion = '2.2.4.0'
   object LabeledEdit1: TLabeledEdit
     Left = 8
@@ -45,7 +46,6 @@ object Form2: TForm2
     EditLabel.Caption = 'Kullanıcı Adı'
     EditLabel.ParentColor = False
     TabOrder = 1
-    OnChange = LabeledEdit2Change
   end
   object LabeledEdit3: TLabeledEdit
     Left = 8
@@ -58,17 +58,38 @@ object Form2: TForm2
     EditLabel.ParentColor = False
     TabOrder = 2
   end
+  object Button2: TButton
+    Left = 233
+    Height = 25
+    Top = 184
+    Width = 75
+    Caption = 'Kaydet'
+    OnClick = Button2Click
+    TabOrder = 5
+  end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
     AutoEncodeStrings = True
     ClientCodepage = 'WINDOWS-1254'
     Properties.Strings = (
       'codepage=WINDOWS-1254'
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
     )
+    HostName = 'localhost'
     Port = 1433
+    Database = 'master'
+    User = 'sa'
+    Password = '764864'
     Protocol = 'FreeTDS_MsSQL>=2005'
-    LibraryLocation = 'dblib.dll'
+    LibraryLocation = 'C:\Users\Adem\Documents\GitHub\lazarus-mssql\src\dblib.dll'
     Left = 32
+    Top = 184
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    Left = 96
     Top = 184
   end
 end

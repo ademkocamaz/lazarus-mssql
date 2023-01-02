@@ -5,8 +5,8 @@ unit Unit1;
 interface
 
 uses
-  SysUtils, Classes, DB, Forms, Controls, Dialogs, StdCtrls, Unit2,
-  LazLoggerBase, VirtualDBGrid, ZConnection, ZDataset;
+  SysUtils, DB, Forms, Controls, Dialogs, StdCtrls, Unit2, Unit3,
+  VirtualDBGrid, ZConnection, ZDataset, Classes;
 
 type
 
@@ -21,6 +21,7 @@ type
     ZConnection1: TZConnection;
     ZQuery1: TZQuery;
     procedure Button1Click(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Run;
   private
@@ -40,6 +41,22 @@ implementation
 procedure TForm1.Button1Click(Sender: TObject);
 begin
   Run;
+end;
+
+procedure TForm1.FormActivate(Sender: TObject);
+var
+  settingsIni: string;
+begin
+  settingsIni := IncludeTrailingPathDelimiter(ExtractFileDir(Application.ExeName)) +
+    'settings.ini';
+  //ShowMessage(settingsIni);
+
+  if not FileExists(settingsIni) then
+  begin
+    Form2.ShowModal;
+    if not FileExists(settingsIni) then
+      Application.Terminate;
+  end;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);

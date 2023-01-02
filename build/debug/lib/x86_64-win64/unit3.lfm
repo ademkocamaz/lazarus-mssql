@@ -1,0 +1,95 @@
+object Form2: TForm2
+  Left = 556
+  Height = 240
+  Top = 125
+  Width = 320
+  Caption = 'Form2'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  LCLVersion = '2.2.4.0'
+  object LabeledEdit1: TLabeledEdit
+    Left = 8
+    Height = 23
+    Top = 24
+    Width = 300
+    EditLabel.Height = 15
+    EditLabel.Width = 300
+    EditLabel.Caption = 'Server'
+    EditLabel.ParentColor = False
+    TabOrder = 0
+  end
+  object ComboBox1: TComboBox
+    Left = 8
+    Height = 23
+    Top = 160
+    Width = 300
+    ItemHeight = 15
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Left = 8
+    Height = 25
+    Top = 128
+    Width = 131
+    Caption = 'Veritabanlarını Listele'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object LabeledEdit2: TLabeledEdit
+    Left = 8
+    Height = 23
+    Top = 64
+    Width = 300
+    EditLabel.Height = 15
+    EditLabel.Width = 300
+    EditLabel.Caption = 'Kullanıcı Adı'
+    EditLabel.ParentColor = False
+    TabOrder = 1
+  end
+  object LabeledEdit3: TLabeledEdit
+    Left = 8
+    Height = 23
+    Top = 104
+    Width = 300
+    EditLabel.Height = 15
+    EditLabel.Width = 300
+    EditLabel.Caption = 'Şifre'
+    EditLabel.ParentColor = False
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 233
+    Height = 25
+    Top = 184
+    Width = 75
+    Caption = 'Kaydet'
+    OnClick = Button2Click
+    TabOrder = 5
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    ClientCodepage = 'WINDOWS-1254'
+    Properties.Strings = (
+      'codepage=WINDOWS-1254'
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    HostName = 'localhost'
+    Port = 1433
+    Database = 'master'
+    User = 'sa'
+    Password = '764864'
+    Protocol = 'FreeTDS_MsSQL>=2005'
+    LibraryLocation = 'C:\Users\Adem\Documents\GitHub\lazarus-mssql\src\dblib.dll'
+    Left = 32
+    Top = 184
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    Left = 96
+    Top = 184
+  end
+end

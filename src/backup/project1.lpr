@@ -10,7 +10,9 @@ uses
   virtualdbgrid_package,
   Unit1,
   zcomponent,
-  Unit2 { you can add units after this };
+  UExceptionLogger,
+  Unit2,
+  Unit3 { you can add units after this };
 
 {$R *.res}
 
@@ -18,8 +20,12 @@ begin
   DebugLogger.LogName := 'log.txt';
   Log('logger started');
   RequireDerivedFormResource := True;
-  Application.Scaled := True;
+  Application.Scaled:=True;
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
+
+  exceptionLogger:=TExceptionLogger.Create(Application);
+  exceptionLogger.LogFileName:='error.log';
+Application.CreateForm(TForm1, Form1);
+Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.
