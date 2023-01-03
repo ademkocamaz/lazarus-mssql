@@ -45,7 +45,7 @@ implementation
 procedure TForm2.Button1Click(Sender: TObject);
 begin
   try
-    Self.Cursor := crHourGlass;
+    Screen.Cursor := crHourGlass;
     ZConnection1.HostName := LabeledEdit1.Text;
     ZConnection1.User := LabeledEdit2.Text;
     ZConnection1.Password := LabeledEdit3.Text;

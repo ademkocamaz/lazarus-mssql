@@ -23,9 +23,9 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
 
-  exceptionLogger:=TExceptionLogger.Create(Application);
-  exceptionLogger.LogFileName:='error.log';
-Application.CreateForm(TForm1, Form1);
-Application.CreateForm(TForm2, Form2);
+  exceptionLogger := TExceptionLogger.Create(Application);
+  exceptionLogger.LogFileName := 'error.log';
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.

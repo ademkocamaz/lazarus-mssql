@@ -6,7 +6,7 @@ interface
 
 uses
   SysUtils, DB, Forms, Controls, Dialogs, StdCtrls, Unit2, Unit3,
-  VirtualDBGrid, ZConnection, ZDataset, Classes;
+  VirtualDBGrid, ZConnection, ZDataset, Classes, IniFiles;
 
 type
 
@@ -46,6 +46,7 @@ end;
 procedure TForm1.FormActivate(Sender: TObject);
 var
   settingsIni: string;
+  settings: TIniFile;
 begin
   settingsIni := IncludeTrailingPathDelimiter(ExtractFileDir(Application.ExeName)) +
     'settings.ini';
@@ -57,6 +58,13 @@ begin
     if not FileExists(settingsIni) then
       Application.Terminate;
   end;
+  settings := TIniFile.Create(settingsIni);
+  ZConnection1.HostName := settings.ReadString('Connection', 'Host', '');
+  ZConnection1.User := settings.ReadString('Connection', 'User', '');
+  ZConnection1.Password := settings.ReadString('Connection', 'Password', '');
+  ZConnection1.Database := settings.ReadString('Database', 'Name', '');
+  FreeAndNil(settings);
+
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
@@ -70,13 +78,12 @@ procedure TForm1.Run;
 begin
   if Memo1.Lines.Text = string.Empty then
   begin
-    ShowMessage('Empty SQL!');
-    Log('Empty SQL!');
-    Exit;
+    raise Exception.Create('Empty SQL');
   end;
   try
+    Screen.Cursor:=crHourGlass;
     try
-      ZConnection1.Connected := True;
+      ZConnection1.Connect;
       Log(Memo1.Lines.Text);
       ZQuery1.SQL := Memo1.Lines;
       if not ZQuery1.Prepared then
@@ -85,13 +92,21 @@ begin
     except
       on Exc: Exception do
       begin
+        Screen.Cursor:=crDefault;
         ShowMessage(Exc.Message);
         Log(Exc.Message);
       end;
 
     end;
   finally
-    ZQuery1.Prepared := False;
+    ZQuery1.Unprepare;
+    Screen.Cursor:=crDefault;
+  end;
+  try
+    except
+
+    end;
+  finally
   end;
 end;
 

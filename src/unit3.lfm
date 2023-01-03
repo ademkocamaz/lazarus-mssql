@@ -80,10 +80,8 @@ object Form2: TForm2
     HostName = 'localhost'
     Port = 1433
     Database = 'master'
-    User = 'sa'
-    Password = '764864'
     Protocol = 'FreeTDS_MsSQL>=2005'
-    LibraryLocation = 'C:\Users\Adem\Documents\GitHub\lazarus-mssql\src\dblib.dll'
+    LibraryLocation = 'dblib.dll'
     Left = 32
     Top = 184
   end

@@ -1,59 +1,67 @@
 object Form1: TForm1
-  Left = 556
-  Height = 502
-  Top = 126
+  Left = 489
+  Height = 497
+  Top = 128
   Width = 703
   Caption = 'Form1'
-  ClientHeight = 502
+  ClientHeight = 497
   ClientWidth = 703
   OnActivate = FormActivate
   OnCreate = FormCreate
+  Position = poScreenCenter
   LCLVersion = '2.2.4.0'
   object VirtualDBGrid1: TVirtualDBGrid
-    Left = 0
-    Height = 337
-    Top = 165
-    Width = 703
+    Left = 1
+    Height = 327
+    Top = 169
+    Width = 701
     Align = alClient
     Header.AutoSizeIndex = 0
     Header.Columns = <>
+    Header.DefaultHeight = 20
+    Header.Height = 20
     Header.MainColumn = -1
-    Header.Options = [hoColumnResize, hoDrag, hoHotTrack, hoShowHint, hoShowSortGlyphs, hoVisible]
-    TabOrder = 0
+    Header.Options = [hoColumnResize, hoDblClickResize, hoDrag, hoHotTrack, hoShowHint, hoShowSortGlyphs, hoVisible, hoHeaderClickAutoSort]
+    TabOrder = 3
+    BorderSpacing.Around = 1
     DBOptions.DataSource = DataSource1
     DBOptions.OddRowColor = 16119285
     DBOptions.EvenRowColor = clWindow
     DBOptions.SortColumnBgColor = 14745599
+    DBOptions.AdvOptions = [aoStrippedRows, aoShowHorzLines, aoShowVertLines, aoAutoInsertIndicator, aoAllowSorting, aoHighlightSortColumn, aoHourGlassCursor, aoSortDBFieldColumns, aoSortCalculatedColumns]
   end
   object Memo1: TMemo
-    Left = 0
+    Left = 1
     Height = 70
-    Top = 70
-    Width = 703
+    Top = 72
+    Width = 701
     Align = alTop
+    BorderSpacing.Around = 1
     Lines.Strings = (
       'Memo1'
     )
     TabOrder = 1
   end
   object ListBox1: TListBox
-    Left = 0
+    Left = 1
     Height = 70
-    Top = 0
-    Width = 703
+    Top = 1
+    Width = 701
     Align = alTop
+    BorderSpacing.Around = 1
     ItemHeight = 0
-    TabOrder = 2
+    TabOrder = 0
   end
   object Button1: TButton
-    Left = 0
+    Left = 1
     Height = 25
-    Top = 140
-    Width = 703
+    Top = 143
+    Width = 701
     Align = alTop
+    BorderSpacing.Around = 1
     Caption = 'Çalıştır'
     OnClick = Button1Click
-    TabOrder = 3
+    TabOrder = 2
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -65,11 +73,7 @@ object Form1: TForm1
       'codepage=WINDOWS-1254'
     )
     SQLHourGlass = True
-    HostName = '192.168.10.199'
     Port = 1433
-    Database = 'LOGO'
-    User = 'liber'
-    Password = '11321'
     Protocol = 'FreeTDS_MsSQL>=2005'
     LibraryLocation = 'dblib.dll'
     Left = 48
