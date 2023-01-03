@@ -60,10 +60,11 @@ begin
       ZQuery1.Next;
     end;
   finally
-    Self.Cursor := crDefault;
+    Screen.Cursor := crDefault;
     ZQuery1.Unprepare;
     ZQuery1.Close;
     ZConnection1.Disconnect;
+    Button2.enabled;
   end;
 
 end;
