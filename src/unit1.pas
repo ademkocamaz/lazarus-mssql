@@ -5,8 +5,8 @@ unit Unit1;
 interface
 
 uses
-  SysUtils, DB, Forms, Controls, Dialogs, StdCtrls, Unit2, Unit3,
-  VirtualDBGrid, ZConnection, ZDataset, Classes, IniFiles;
+  SysUtils, DB, Forms, Controls, Dialogs, StdCtrls, Unit2,
+  Unit3, VirtualDBGrid, ZConnection, ZDataset, IniFiles;
 
 type
 

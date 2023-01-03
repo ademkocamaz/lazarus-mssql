@@ -5,8 +5,8 @@ unit Unit1;
 interface
 
 uses
-  SysUtils, DB, Forms, Controls, Dialogs, StdCtrls, Unit2, Unit3,
-  VirtualDBGrid, ZConnection, ZDataset, Classes, IniFiles;
+  SysUtils, DB, Forms, Controls, Dialogs, StdCtrls, Unit2,
+  Unit3, VirtualDBGrid, virtualdbtreeex, ZConnection, ZDataset, IniFiles;
 
 type
 
@@ -101,12 +101,6 @@ begin
   finally
     ZQuery1.Unprepare;
     Screen.Cursor:=crDefault;
-  end;
-  try
-    except
-
-    end;
-  finally
   end;
 end;
 

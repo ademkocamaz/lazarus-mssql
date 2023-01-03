@@ -117,6 +117,12 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="virtualdbtreeexlaz"/>
+      </Item>
+      <Item>
+        <PackageName Value="SynEdit"/>
+      </Item>
+      <Item>
         <PackageName Value="ExceptionLogger"/>
       </Item>
       <Item>
