@@ -2,3 +2,5 @@
 03.01.2023 15:18:02 : select name from sys.databases
 03.01.2023 15:34:54 : logger started
 03.01.2023 15:35:09 : select name from sys.databases
+04.01.2023 18:50:02 : logger started
+04.01.2023 18:50:51 : SELECT NAME FROM SYS.DATABASES
