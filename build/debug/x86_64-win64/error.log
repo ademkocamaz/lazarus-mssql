@@ -1,0 +1,108 @@
+Date/time          : 2025-03-18 09:28:06.597
+Operating system   : Windows 10 x86_64
+user name          : Adem
+program up time    : 0days 0hours 0min 7sec 844ms
+free disk space    : 239 GB
+Process ID         : 30148
+Thread ID          : 420
+Executable         : project1.exe
+App. title         : project1
+Version            : 0.0.0.33
+Compiled date      : 2025/03/17 at 17:46:26
+Build target       : x86_64 - Win64
+LCL version        : LCL 3.8.0.0
+Widget set         : win32/win64
+Exception class    : EZSQLException
+Exception message  : Requested database driver was not found
+
+01: 0036E8B3     
+02: 003250EB     
+03: 0003D517     
+04: 00159DF6     
+05: 001809BA     
+06: 00181141     
+07: 00180876     
+08: 0001017E     
+09: 001589AF     
+10: 0014C1D1     
+11: 00206F43     
+12: 0012AD91     
+13: 0012B5E9     
+14: 0025BA14     
+15: 488BEF5C     
+16: 488BDFBB     
+17: 488BD814     
+
+
+Date/time          : 2025-03-18 09:36:44.704
+Operating system   : Windows 10 x86_64
+user name          : Adem
+program up time    : 0days 0hours 3min 31sec 453ms
+free disk space    : 236 GB
+Process ID         : 27624
+Thread ID          : 2120
+Executable         : project1.exe
+App. title         : project1
+Version            : 0.0.0.34
+Compiled date      : 2025/03/17 at 17:46:26
+Build target       : x86_64 - Win64
+LCL version        : LCL 3.8.0.0
+Widget set         : win32/win64
+Exception class    : EAccessViolation
+Exception message  : Access violation
+
+01: 005703BE     
+02: 002F6A6B     
+03: 002F8F3B     
+04: 002F8DCA     
+05: 002AC7E1     
+06: 002AC464     
+07: 002ABE6A     
+08: 002D4100     
+09: 002C809F     
+10: 002CA575     
+11: 0001017E     
+12: 001589AF     
+13: 0014C1D1     
+14: 002E09B7     
+15: 00206F43     
+16: 0012AD91     
+17: 0012B5E9     
+
+
+Date/time          : 2025-03-18 09:36:53.510
+Operating system   : Windows 10 x86_64
+user name          : Adem
+program up time    : 0days 0hours 3min 40sec 266ms
+free disk space    : 236 GB
+Process ID         : 27624
+Thread ID          : 2120
+Executable         : project1.exe
+App. title         : project1
+Version            : 0.0.0.34
+Compiled date      : 2025/03/17 at 17:46:26
+Build target       : x86_64 - Win64
+LCL version        : LCL 3.8.0.0
+Widget set         : win32/win64
+Exception class    : EAccessViolation
+Exception message  : Access violation
+
+01: 005703BE     
+02: 002F6A6B     
+03: 002F8F3B     
+04: 002F8DCA     
+05: 002AC7E1     
+06: 002AC464     
+07: 002ACF38     
+08: 0001017E     
+09: 001589AF     
+10: 0014C1D1     
+11: 002E09B7     
+12: 00149A37     
+13: 0015503E     
+14: 00160DE0     
+15: 00146D50     
+16: 001463EE     
+17: 00145F2A     
+
+

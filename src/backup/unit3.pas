@@ -64,7 +64,7 @@ begin
     ZQuery1.Unprepare;
     ZQuery1.Close;
     ZConnection1.Disconnect;
-    Button2.enabled;
+    Button2.Enabled:=True;
   end;
 
 end;

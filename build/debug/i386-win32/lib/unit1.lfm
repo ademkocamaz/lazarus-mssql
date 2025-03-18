@@ -1,0 +1,94 @@
+object Form1: TForm1
+  Left = 950
+  Height = 497
+  Top = 130
+  Width = 703
+  Caption = 'Form1'
+  ClientHeight = 497
+  ClientWidth = 703
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '3.8.0.0'
+  object VirtualDBGrid1: TVirtualDBGrid
+    Left = 1
+    Height = 327
+    Top = 169
+    Width = 701
+    Align = alClient
+    Header.AutoSizeIndex = 0
+    Header.Columns = <>
+    Header.DefaultHeight = 20
+    Header.Height = 20
+    Header.MainColumn = -1
+    Header.Options = [hoColumnResize, hoDblClickResize, hoDrag, hoHotTrack, hoShowHint, hoShowSortGlyphs, hoVisible, hoHeaderClickAutoSort]
+    TabOrder = 3
+    BorderSpacing.Around = 1
+    DBOptions.DataSource = DataSource1
+    DBOptions.OddRowColor = 16119285
+    DBOptions.EvenRowColor = clWindow
+    DBOptions.SortColumnBgColor = 14745599
+    DBOptions.AdvOptions = [aoStrippedRows, aoShowHorzLines, aoShowVertLines, aoAutoInsertIndicator, aoAllowSorting, aoHighlightSortColumn, aoHourGlassCursor, aoSortDBFieldColumns, aoSortCalculatedColumns]
+  end
+  object Memo1: TMemo
+    Left = 1
+    Height = 70
+    Top = 72
+    Width = 701
+    Align = alTop
+    BorderSpacing.Around = 1
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 1
+  end
+  object ListBox1: TListBox
+    Left = 1
+    Height = 70
+    Top = 1
+    Width = 701
+    Align = alTop
+    BorderSpacing.Around = 1
+    ItemHeight = 0
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 1
+    Height = 25
+    Top = 143
+    Width = 701
+    Align = alTop
+    BorderSpacing.Around = 1
+    Caption = 'Çalıştır'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    ClientCodepage = 'UTF-8'
+    Properties.Strings = (
+      'AutoEncodeStrings=ON'
+      'controls_cp=CP_UTF8'
+      'codepage=UTF-8'
+      'RawStringEncoding=DB_CP'
+    )
+    SQLHourGlass = True
+    DisableSavepoints = False
+    Port = 1433
+    Protocol = 'mssql'
+    LibraryLocation = 'libsybdb-5.dll'
+    Left = 48
+    Top = 424
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 184
+    Top = 424
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    Left = 120
+    Top = 424
+  end
+end

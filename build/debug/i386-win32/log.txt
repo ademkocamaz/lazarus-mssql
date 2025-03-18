@@ -1,0 +1,2 @@
+18.03.2025 09:36:08 : logger started
+18.03.2025 09:38:27 : SELECT * FROM DEPOLAR

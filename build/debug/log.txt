@@ -1,5 +1,0 @@
-02.01.2023 18:06:03 : logger started
-02.01.2023 18:06:33 : logger started
-02.01.2023 18:11:23 : logger started
-02.01.2023 18:13:35 : logger started
-02.01.2023 18:17:47 : logger started

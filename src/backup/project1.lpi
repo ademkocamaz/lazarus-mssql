@@ -17,7 +17,7 @@
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
-      <BuildNr Value="31"/>
+      <BuildNr Value="34"/>
       <Language Value="041F"/>
       <CharSet Value="04E6"/>
     </VersionInfo>
@@ -28,11 +28,11 @@
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="..\build\debug\project1"/>
+            <Filename Value="..\build\debug\$(TargetCPU)-$(TargetOS)\project1"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <UnitOutputDirectory Value="..\build\debug\lib\$(TargetCPU)-$(TargetOS)"/>
+            <UnitOutputDirectory Value="..\build\debug\$(TargetCPU)-$(TargetOS)\lib\"/>
           </SearchPaths>
           <Parsing>
             <SyntaxOptions>
@@ -47,10 +47,12 @@
               <StackChecks Value="True"/>
             </Checks>
             <VerifyObjMethodCallValidity Value="True"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
           </CodeGeneration>
           <Linking>
             <Debugging>
-              <DebugInfoType Value="dsStabs"/>
+              <DebugInfoType Value="dsDwarf3"/>
               <UseHeaptrc Value="True"/>
               <TrashVariables Value="True"/>
               <UseExternalDbgSyms Value="True"/>
@@ -94,7 +96,7 @@
           </CodeGeneration>
           <Linking>
             <Debugging>
-              <DebugInfoType Value="dsStabs"/>
+              <DebugInfoType Value="dsDwarf3"/>
               <UseExternalDbgSyms Value="True"/>
             </Debugging>
             <LinkSmart Value="True"/>

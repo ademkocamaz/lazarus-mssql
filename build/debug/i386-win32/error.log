@@ -1,0 +1,36 @@
+Date/time          : 2025-03-18 09:38:38.567
+Operating system   : Windows 10 x86_64
+user name          : Adem
+program up time    : 0days 0hours 2min 29sec 703ms
+free disk space    : 237 GB
+Process ID         : 24608
+Thread ID          : 21320
+Executable         : project1.exe
+App. title         : project1
+Version            : 0.0.0.35
+Compiled date      : 2025/03/17 at 18:00:29
+Build target       : i386 - Win32
+LCL version        : LCL 3.8.0.0
+Widget set         : win32/win64
+Exception class    : EAccessViolation
+Exception message  : Access violation
+
+01: 0088C96D   TZABSTRACTRODATASET.GETRECORD in C:/Users/Adem/AppData/Local/lazarus/onlinepackagemanager/packages/zeosdbo/src/component/ZAbstractRODataset.pas (2569)
+02: 0066EF84   VIRTUALTREES_$$_finalize$ in VirtualTrees.pas (36755)
+03: 00670F02   VIRTUALTREES_$$_finalize$ in VirtualTrees.pas (36755)
+04: 00670DC3   VIRTUALTREES_$$_finalize$ in VirtualTrees.pas (36755)
+05: 00630091   TCUSTOMVIRTUALDBGRID.UPDATEDBTREE in VirtualDBGrid.pas (3074)
+06: 0062FD84   TCUSTOMVIRTUALDBGRID.UPDATEVISIBLEDBTREE in VirtualDBGrid.pas (2957)
+07: 00630681   TCUSTOMVIRTUALDBGRID.WMSIZE in VirtualDBGrid.pas (3229)
+08: 0040E8D3     (2977)
+09: 0051D1AE   TCONTROL.WNDPROC in ./include/control.inc (2304)
+10: 0051352B   TWINCONTROL.WNDPROC in ./include/wincontrol.inc (5434)
+11: 0065C36D   TBASEVIRTUALTREE.WNDPROC in VirtualTrees.pas (25905)
+12: 0051156D   TWINCONTROL.SENDMOVESIZEMESSAGES in ./include/wincontrol.inc (4346)
+13: 0051A4C5   TCONTROL.CHANGEBOUNDS in ./include/control.inc (758)
+14: 005238CD   TCONTROL.SETBOUNDSKEEPBASE in ./include/control.inc (5584)
+15: 0050F111   DOPOSITION in ./include/wincontrol.inc (3046)
+16: 0050E992   DOALIGN in ./include/wincontrol.inc (3159)
+17: 0050E5C6   TWINCONTROL.ALIGNCONTROLS in ./include/wincontrol.inc (3237)
+
+

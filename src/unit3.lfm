@@ -1,14 +1,14 @@
 object Form2: TForm2
-  Left = 556
+  Left = 613
   Height = 240
-  Top = 125
+  Top = 183
   Width = 320
   Caption = 'Form2'
   ClientHeight = 240
   ClientWidth = 320
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '3.8.0.0'
   object LabeledEdit1: TLabeledEdit
     Left = 8
     Height = 23
@@ -35,8 +35,8 @@ object Form2: TForm2
     Top = 128
     Width = 131
     Caption = 'Veritabanlarını Listele'
-    OnClick = Button1Click
     TabOrder = 3
+    OnClick = Button1Click
   end
   object LabeledEdit2: TLabeledEdit
     Left = 8
@@ -67,23 +67,22 @@ object Form2: TForm2
     Width = 75
     Caption = 'Kaydet'
     Enabled = False
-    OnClick = Button2Click
     TabOrder = 5
+    OnClick = Button2Click
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
-    AutoEncodeStrings = True
-    ClientCodepage = 'WINDOWS-1254'
+    ClientCodepage = 'UTF-8'
     Properties.Strings = (
-      'codepage=WINDOWS-1254'
+      'codepage=UTF-8'
       'AutoEncodeStrings=True'
       'controls_cp=CP_UTF8'
     )
-    HostName = 'localhost'
+    DisableSavepoints = False
     Port = 1433
     Database = 'master'
-    Protocol = 'FreeTDS_MsSQL>=2005'
-    LibraryLocation = 'dblib.dll'
+    Protocol = 'mssql'
+    LibraryLocation = 'libsybdb-5.dll'
     Left = 32
     Top = 184
   end

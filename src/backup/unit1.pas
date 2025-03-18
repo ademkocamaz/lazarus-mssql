@@ -6,7 +6,7 @@ interface
 
 uses
   SysUtils, DB, Forms, Controls, Dialogs, StdCtrls, Unit2,
-  Unit3, VirtualDBGrid, virtualdbtreeex, ZConnection, ZDataset, IniFiles;
+  Unit3, VirtualDBGrid, ZConnection, ZDataset, IniFiles;
 
 type
 
