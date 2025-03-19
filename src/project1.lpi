@@ -32,7 +32,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <UnitOutputDirectory Value="..\build\debug\$(TargetCPU)-$(TargetOS)\lib\"/>
+            <UnitOutputDirectory Value="..\build\debug\$(TargetCPU)-$(TargetOS)\lib"/>
           </SearchPaths>
           <Parsing>
             <SyntaxOptions>
